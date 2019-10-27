@@ -1,0 +1,42 @@
+<!doctype html>
+   <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Solar System - Intro (1)</title>
+        <!-- The following group of libraries provided by their authors
+        <script src="three.min.js"></script>
+        <script src="OBJLoader.js"></script>
+        <script src="jquery-3.4.1.min.js"></script>
+        <script src="MTLLoader.js"></script>
+-->
+<!---->
+<!-- -->
+        <script src = "http://threejs.org/build/three.min.js"></script>
+        <script src = "https://mamboleoo.be/learnThree/demos/OBJLoader.js"></script>
+        <script src = "https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <!-- TODO please find and add link to a following library.
+        You can found a sample of this library by link https://github.com/mrdoob/three.js/blob/master/examples/js/loaders/MTLLoader.js
+         -->
+        <script src="MTLLoader.js"></script> <!-- It's supposed that you either specified a link to the library or have it in WebContent folder of your project -->
+        <!-- The following libraries are contains in 
+        <groupId>com.gmail.ivansergeish</groupId><artifactId>worlds-front-end</artifactId><version>1.0.0</version> 
+        Worlds-frontend project
+-->       
+        <script src="3dviewer/js/ObjectsList.js"></script>
+        <script src="3dviewer/js/ObjectOnMap.js"></script>
+        <script src="3dviewer/js/XYZ.js"></script>
+        <script src="3dviewer/js/MapFrame.js"></script>
+ 	<script src="3dviewer/js/MapCanvas.js"></script>
+    </head>
+
+<body>
+
+<script>
+$( document ).ready(function() {
+    console.log( "ready!" );
+    var mapCanvas = new MapCanvas('http://localhost:8080/api-launcher-1.0.0', 100, 3.14 / 18000, 1, new XYZ(0, 0, 0), 50);
+    mapCanvas.init();
+});
+</script>
+
+</body>
