@@ -12,8 +12,8 @@ This sample project shows how to use Worlds-tools - project.
 7) specify radius of map reloading in Worlds_map_uploader/index.html
 
 var mapCanvas = 
-new MapCanvas('http://localhost:8080/api-launcher-1.0.0', 100, 3.14 / 18000, 1, new XYZ(0, 0, 0), /* radius of map reloading*/ 50);
+new MapCanvas('http://localhost:8080/api-launcher-1.0.0.alpha-RELEASE', 100, 3.14 / 18000, 1, new XYZ(0, 0, 0), /* radius of map reloading*/ 50);
 
 8) cd Worlds-Launcher, mvn clean install.
 9) The project will be assambled to web application. You can publish it on your web-server.
-10) You can view your map entering link http://localhost:8080/api-launcher-1.0.0/index.html
+10) You can view your map entering link http://localhost:8080/api-launcher-1.0.0.alpha-RELEASE/index.html
