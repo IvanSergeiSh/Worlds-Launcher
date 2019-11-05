@@ -7,7 +7,7 @@
 
 	<groupId>com.gmail.ascanada52</groupId>
 	<artifactId>api-launcher</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.0.alpha-RELEASE</version>
 	<name>api-launcher</name>
 	<packaging>war</packaging>
 	
@@ -19,7 +19,7 @@
 		<spring-version>5.1.2.RELEASE</spring-version>
 		<jetty.version>9.2.5.v20141112</jetty.version>
 		<hibernate.version>4.3.10.Final</hibernate.version>
-		<!-- Database -->
+		<!-- Database, don't forget to change url, username, password to your's -->
 		<jdbc.url>jdbc:postgresql://localhost/map</jdbc.url>
 	    <jdbc.user>map_api</jdbc.user>
 	    <jdbc.password>api-for-3dmap</jdbc.password>
@@ -173,7 +173,25 @@
 		<dependency>
 			<groupId>com.gmail.ascanada52</groupId>
 			<artifactId>worlds-api</artifactId>
-			<version>1.0.0</version>
+			<version>${project.version}</version>
+			<exclusions>
+				<exclusion>
+					<!-- For example we want to use a depot strategy or any other custom strategy -->
+					<groupId>com.gmail.ascanada52</groupId>
+					<artifactId>earth-localization</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- We included this strategy instead of default one -->
+		<dependency>
+			<groupId>com.gmail.ascanada52</groupId>
+			<artifactId>depot-localization</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.gmail.ivansergeish</groupId>
+			<artifactId>worlds-front-end</artifactId>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
@@ -199,12 +217,6 @@
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
 			<version>1.1.7</version>
-			<!-- License:  EPL v1.0 and the LGPL 2.1 -->
-		</dependency>
-		<dependency>
-			<groupId>com.gmail.ivansergeish</groupId>
-			<artifactId>worlds-front-end</artifactId>
-			<version>1.0.0</version>
 			<!-- License:  EPL v1.0 and the LGPL 2.1 -->
 		</dependency>
 	</dependencies>

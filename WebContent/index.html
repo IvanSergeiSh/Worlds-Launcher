@@ -2,7 +2,7 @@
    <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Solar System - Intro (1)</title>
+        <title>Worlds-project</title>
         <!-- The following group of libraries provided by their authors
         <script src="three.min.js"></script>
         <script src="OBJLoader.js"></script>
@@ -10,7 +10,8 @@
         <script src="MTLLoader.js"></script>
 -->
 <!---->
-<!-- -->
+<!-- The following lines are just example where you can find this libraries. 
+If you allready has them in your WebContent folder use the instructions above -->
         <script src = "http://threejs.org/build/three.min.js"></script>
         <script src = "https://mamboleoo.be/learnThree/demos/OBJLoader.js"></script>
         <script src = "https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -34,7 +35,7 @@
 <script>
 $( document ).ready(function() {
     console.log( "ready!" );
-    var mapCanvas = new MapCanvas('http://localhost:8080/api-launcher-1.0.0', 100, 3.14 / 18000, 1, new XYZ(0, 0, 0), 50);
+    var mapCanvas = new MapCanvas('http://localhost:8080/api-launcher-1.0.0.alpha-RELEASE', 100, 3.14 / 18000, 1, new XYZ(0, 0, 0), 50);
     mapCanvas.init();
 });
 </script>
